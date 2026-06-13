@@ -1,0 +1,2313 @@
+[
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Easy",
+    "question": "What is overfitting?",
+    "answer": "Overfitting occurs when a model learns the training data too well, including noise and outliers, and performs poorly on new unseen data because it memorizes instead of generalizing.",
+    "code_example": "from sklearn.model_selection import cross_val_score\nscores = cross_val_score(model, X, y, cv=5)",
+    "company_tags": [
+      "Google",
+      "Amazon",
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Easy",
+    "question": "What is underfitting?",
+    "answer": "Underfitting occurs when a model is too simple to capture the underlying pattern in data, resulting in poor performance on both training and test data due to high bias.",
+    "code_example": "",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "Explain the bias-variance tradeoff",
+    "answer": "Bias is error from overly simple assumptions causing underfitting. Variance is error from sensitivity to training data fluctuations causing overfitting. The goal is to balance both to minimize total error.",
+    "code_example": "",
+    "company_tags": [
+      "Microsoft",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between Bagging and Boosting?",
+    "answer": "Bagging trains multiple models independently on random subsets of data and averages results to reduce variance, e.g. Random Forest. Boosting trains models sequentially, each correcting errors of the previous, reducing bias, e.g. AdaBoost, XGBoost.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Flipkart"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is cross validation and why is it used?",
+    "answer": "Cross validation splits data into multiple folds, training on some and testing on others repeatedly, giving a more reliable estimate of model performance and helping detect overfitting.",
+    "code_example": "from sklearn.model_selection import KFold\nkf = KFold(n_splits=5)",
+    "company_tags": [
+      "Amazon",
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Hard",
+    "question": "What is regularization and how does L1 differ from L2?",
+    "answer": "Regularization adds a penalty term to the loss function to discourage complex models. L1 (Lasso) adds absolute coefficient values and can shrink some to zero, performing feature selection. L2 (Ridge) adds squared coefficients, shrinking them but rarely to zero.",
+    "code_example": "from sklearn.linear_model import Lasso, Ridge",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between classification and regression?",
+    "answer": "Classification predicts discrete categories or labels, like spam vs not spam. Regression predicts continuous numerical values, like house prices. Both are supervised learning types.",
+    "code_example": "",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Easy",
+    "question": "What is supervised learning?",
+    "answer": "Supervised learning trains a model on labeled data, where each input has a known correct output, allowing the model to learn the mapping and generalize to new data.",
+    "code_example": "",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Easy",
+    "question": "What is unsupervised learning?",
+    "answer": "Unsupervised learning works with unlabeled data, finding hidden patterns or groupings on its own, such as clustering with K-Means or dimensionality reduction with PCA.",
+    "code_example": "from sklearn.cluster import KMeans\nmodel = KMeans(n_clusters=3)",
+    "company_tags": [
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is feature engineering?",
+    "answer": "Feature engineering is the process of creating new input variables or transforming existing ones to improve model performance, such as encoding categorical variables, scaling, or creating interaction terms.",
+    "code_example": "from sklearn.preprocessing import StandardScaler\nscaler = StandardScaler()",
+    "company_tags": [
+      "Deloitte",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is a confusion matrix?",
+    "answer": "A confusion matrix is a table showing counts of true positives, true negatives, false positives, and false negatives, used to evaluate classification model performance.",
+    "code_example": "from sklearn.metrics import confusion_matrix\ncm = confusion_matrix(y_true, y_pred)",
+    "company_tags": [
+      "Google",
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What are precision and recall?",
+    "answer": "Precision is the ratio of true positives to all predicted positives, showing how many predicted positives are correct. Recall is the ratio of true positives to all actual positives, showing how many actual positives were found.",
+    "code_example": "from sklearn.metrics import precision_score, recall_score",
+    "company_tags": [
+      "Amazon",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is the F1 score?",
+    "answer": "The F1 score is the harmonic mean of precision and recall, providing a single metric that balances both, especially useful when classes are imbalanced.",
+    "code_example": "from sklearn.metrics import f1_score\nf1_score(y_true, y_pred)",
+    "company_tags": [
+      "Amazon",
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Hard",
+    "question": "What is the curse of dimensionality?",
+    "answer": "As the number of features increases, data becomes sparse in high dimensional space, making models harder to train and more prone to overfitting. Techniques like PCA help reduce dimensions while preserving information.",
+    "code_example": "from sklearn.decomposition import PCA\npca = PCA(n_components=2)",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Easy",
+    "question": "What is normalization and why is it important?",
+    "answer": "Normalization scales numerical features to a common range, typically 0 to 1, important because features with larger ranges can dominate distance-based or gradient-based algorithms.",
+    "code_example": "from sklearn.preprocessing import MinMaxScaler\nscaler = MinMaxScaler()",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Easy",
+    "question": "What is the difference between normalization and standardization?",
+    "answer": "Normalization scales values to a fixed range like 0 to 1. Standardization transforms data to have mean 0 and standard deviation 1, useful when data has varying scales and is not necessarily bounded.",
+    "code_example": "from sklearn.preprocessing import StandardScaler\nscaler = StandardScaler()",
+    "company_tags": [
+      "Amazon",
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is gradient descent?",
+    "answer": "Gradient descent is an optimization algorithm that iteratively adjusts model parameters in the direction that reduces the loss function, using the gradient (slope) of the loss with respect to parameters.",
+    "code_example": "theta = theta - learning_rate * gradient",
+    "company_tags": [
+      "Google",
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is the learning rate in gradient descent?",
+    "answer": "The learning rate controls the step size taken during each update of gradient descent. Too high causes overshooting and instability, too low causes slow convergence.",
+    "code_example": "",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Hard",
+    "question": "What is the difference between batch gradient descent, stochastic gradient descent, and mini-batch gradient descent?",
+    "answer": "Batch gradient descent uses the entire dataset for each update, which is accurate but slow. Stochastic gradient descent uses one sample per update, which is fast but noisy. Mini-batch gradient descent uses small batches, balancing speed and stability.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is logistic regression used for?",
+    "answer": "Logistic regression is used for binary classification, modeling the probability that an instance belongs to a class using a sigmoid function applied to a linear combination of features.",
+    "code_example": "from sklearn.linear_model import LogisticRegression\nmodel = LogisticRegression()",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Easy",
+    "question": "What is linear regression?",
+    "answer": "Linear regression models the relationship between a dependent variable and one or more independent variables by fitting a straight line that minimizes the sum of squared errors.",
+    "code_example": "from sklearn.linear_model import LinearRegression\nmodel = LinearRegression()",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is a decision tree?",
+    "answer": "A decision tree splits data into branches based on feature values, creating a tree structure where leaves represent predicted outcomes. It is interpretable but prone to overfitting if not pruned.",
+    "code_example": "from sklearn.tree import DecisionTreeClassifier\nmodel = DecisionTreeClassifier(max_depth=5)",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is Random Forest?",
+    "answer": "Random Forest is an ensemble of decision trees trained on random subsets of data and features, with predictions combined through majority voting or averaging, reducing overfitting compared to a single tree.",
+    "code_example": "from sklearn.ensemble import RandomForestClassifier\nmodel = RandomForestClassifier(n_estimators=100)",
+    "company_tags": [
+      "Amazon",
+      "Flipkart"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Hard",
+    "question": "How does XGBoost work?",
+    "answer": "XGBoost is a gradient boosting algorithm that builds trees sequentially, where each tree corrects errors of the previous ones using gradient information. It includes regularization to prevent overfitting and is highly optimized for speed.",
+    "code_example": "import xgboost as xgb\nmodel = xgb.XGBClassifier()",
+    "company_tags": [
+      "Google",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is Support Vector Machine (SVM)?",
+    "answer": "SVM finds the optimal hyperplane that separates classes with the maximum margin. It can use kernel functions to handle non-linearly separable data by mapping it to higher dimensions.",
+    "code_example": "from sklearn.svm import SVC\nmodel = SVC(kernel='rbf')",
+    "company_tags": [
+      "Startup",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is the kernel trick in SVM?",
+    "answer": "The kernel trick allows SVM to operate in a higher dimensional space without explicitly computing the transformation, using kernel functions like RBF or polynomial to find non-linear decision boundaries efficiently.",
+    "code_example": "",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Easy",
+    "question": "What is K-Nearest Neighbors (KNN)?",
+    "answer": "KNN classifies a data point based on the majority class among its K nearest neighbors in the feature space, using a distance metric like Euclidean distance. It is simple but can be slow for large datasets.",
+    "code_example": "from sklearn.neighbors import KNeighborsClassifier\nmodel = KNeighborsClassifier(n_neighbors=5)",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "How do you choose the value of K in KNN?",
+    "answer": "The value of K is typically chosen using cross validation by testing different values and selecting the one with the best validation performance. A small K can overfit while a large K can underfit.",
+    "code_example": "",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is K-Means clustering?",
+    "answer": "K-Means partitions data into K clusters by iteratively assigning points to the nearest cluster centroid and updating centroids as the mean of assigned points, until convergence.",
+    "code_example": "from sklearn.cluster import KMeans\nmodel = KMeans(n_clusters=3).fit(X)",
+    "company_tags": [
+      "Microsoft",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "How do you choose the number of clusters in K-Means?",
+    "answer": "The Elbow Method plots within-cluster sum of squares against the number of clusters and identifies the point where the rate of decrease sharply slows, called the elbow, as the optimal number of clusters.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Hard",
+    "question": "What is the difference between K-Means and Hierarchical Clustering?",
+    "answer": "K-Means requires specifying the number of clusters in advance and partitions data into flat clusters. Hierarchical clustering builds a tree of clusters (dendrogram) without needing a predefined number, allowing clusters at different levels of granularity.",
+    "code_example": "from scipy.cluster.hierarchy import dendrogram, linkage",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is Principal Component Analysis (PCA)?",
+    "answer": "PCA is a dimensionality reduction technique that transforms data into a new set of orthogonal components ordered by the amount of variance they explain, allowing reduction of features while preserving most information.",
+    "code_example": "from sklearn.decomposition import PCA\npca = PCA(n_components=2)",
+    "company_tags": [
+      "Google",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between a generative model and a discriminative model?",
+    "answer": "A generative model learns the joint probability distribution of inputs and outputs and can generate new data, e.g. Naive Bayes. A discriminative model learns the boundary between classes directly, e.g. logistic regression.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is Naive Bayes and why is it called naive?",
+    "answer": "Naive Bayes is a classification algorithm based on Bayes theorem that assumes all features are independent given the class label. It is called naive because this independence assumption rarely holds true in practice but the algorithm still performs well.",
+    "code_example": "from sklearn.naive_bayes import GaussianNB\nmodel = GaussianNB()",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is one-hot encoding?",
+    "answer": "One-hot encoding converts categorical variables into binary vectors where each category is represented by a vector with a single 1 and all other values 0, allowing categorical data to be used in numerical models.",
+    "code_example": "import pandas as pd\npd.get_dummies(df['category'])",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is label encoding and when should it be avoided?",
+    "answer": "Label encoding assigns each category a unique integer. It should be avoided for nominal categories with no inherent order, since models may incorrectly interpret the integers as having ordinal relationships.",
+    "code_example": "from sklearn.preprocessing import LabelEncoder\nle = LabelEncoder()",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "How do you handle missing data in a dataset?",
+    "answer": "Common approaches include removing rows or columns with missing values, imputing with mean, median, or mode, using model-based imputation, or using algorithms that handle missing values natively like XGBoost.",
+    "code_example": "from sklearn.impute import SimpleImputer\nimputer = SimpleImputer(strategy='mean')",
+    "company_tags": [
+      "Deloitte",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is class imbalance and how do you handle it?",
+    "answer": "Class imbalance occurs when one class has significantly more samples than another. It can be handled using techniques like oversampling the minority class (SMOTE), undersampling the majority class, or using class weights in the model.",
+    "code_example": "from imblearn.over_sampling import SMOTE\nsmote = SMOTE()",
+    "company_tags": [
+      "Amazon",
+      "Flipkart"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is the ROC curve and AUC?",
+    "answer": "The ROC curve plots the true positive rate against the false positive rate at various threshold settings. AUC (Area Under Curve) summarizes this into a single value, where higher AUC indicates better model performance at distinguishing classes.",
+    "code_example": "from sklearn.metrics import roc_auc_score\nroc_auc_score(y_true, y_pred_proba)",
+    "company_tags": [
+      "Amazon",
+      "Google"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is hyperparameter tuning?",
+    "answer": "Hyperparameter tuning is the process of finding the optimal configuration of model parameters that are not learned from data, such as learning rate or tree depth, often using techniques like Grid Search or Random Search.",
+    "code_example": "from sklearn.model_selection import GridSearchCV\ngrid = GridSearchCV(model, param_grid)",
+    "company_tags": [
+      "Startup",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between Grid Search and Random Search?",
+    "answer": "Grid Search exhaustively tries every combination of specified hyperparameter values, which can be computationally expensive. Random Search samples random combinations, often finding good results faster with fewer evaluations.",
+    "code_example": "from sklearn.model_selection import RandomizedSearchCV",
+    "company_tags": [
+      "Microsoft",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Hard",
+    "question": "What is Bayesian optimization for hyperparameter tuning?",
+    "answer": "Bayesian optimization builds a probabilistic model of the objective function and uses it to select the most promising hyperparameters to evaluate next, making it more sample-efficient than grid or random search for expensive models.",
+    "code_example": "",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is ensemble learning?",
+    "answer": "Ensemble learning combines predictions from multiple models to produce a final prediction that is often more accurate and robust than any single model, using techniques like bagging, boosting, and stacking.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Flipkart"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Hard",
+    "question": "What is stacking in ensemble learning?",
+    "answer": "Stacking trains multiple different base models and then trains a meta-model on their predictions to combine them optimally, often improving performance over any individual model.",
+    "code_example": "from sklearn.ensemble import StackingClassifier",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between online learning and batch learning?",
+    "answer": "Batch learning trains a model on the entire dataset at once and requires retraining for new data. Online learning updates the model incrementally as new data arrives, useful for streaming data scenarios.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between parametric and non-parametric models?",
+    "answer": "Parametric models assume a fixed functional form with a finite set of parameters, like linear regression. Non-parametric models do not assume a fixed form and can grow in complexity with more data, like KNN or decision trees.",
+    "code_example": "",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between a validation set and a test set?",
+    "answer": "A validation set is used during training to tune hyperparameters and select models. A test set is used only after final model selection to evaluate generalization performance on completely unseen data.",
+    "code_example": "",
+    "company_tags": [
+      "Startup",
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Easy",
+    "question": "What is a hyperparameter versus a parameter?",
+    "answer": "Parameters are learned by the model from training data, like weights in linear regression. Hyperparameters are set before training and control the learning process, like learning rate or number of trees.",
+    "code_example": "",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "What is multicollinearity and why is it a problem?",
+    "answer": "Multicollinearity occurs when independent variables are highly correlated with each other, making it difficult to determine individual feature effects and causing unstable coefficient estimates in linear models.",
+    "code_example": "",
+    "company_tags": [
+      "Deloitte",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Machine Learning",
+    "difficulty": "Medium",
+    "question": "How do you detect multicollinearity?",
+    "answer": "Multicollinearity can be detected using the Variance Inflation Factor (VIF), where a VIF above 5 or 10 typically indicates problematic correlation between features, or by examining a correlation matrix.",
+    "code_example": "from statsmodels.stats.outliers_influence import variance_inflation_factor",
+    "company_tags": [
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Easy",
+    "question": "What is a neural network?",
+    "answer": "A neural network is a computational model inspired by the human brain, consisting of layers of interconnected nodes (neurons) that process input data through weighted connections and activation functions to produce an output.",
+    "code_example": "",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Easy",
+    "question": "What is a perceptron?",
+    "answer": "A perceptron is the simplest type of neural network unit, taking weighted inputs, summing them, and passing the result through an activation function to produce a binary output. It forms the basic building block of neural networks.",
+    "code_example": "",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Easy",
+    "question": "What is a CNN used for?",
+    "answer": "CNN (Convolutional Neural Network) is mainly used for image-related tasks like classification, object detection, and segmentation. It automatically learns spatial features using convolutional filters.",
+    "code_example": "",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is dropout and why is it used?",
+    "answer": "Dropout randomly deactivates a fraction of neurons during training, preventing the network from relying too heavily on specific neurons. This reduces overfitting and improves generalization.",
+    "code_example": "from tensorflow.keras.layers import Dropout\nmodel.add(Dropout(0.5))",
+    "company_tags": [
+      "Amazon",
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is transfer learning?",
+    "answer": "Transfer learning uses a model pre-trained on a large dataset and fine-tunes it for a specific new task. This saves training time and improves performance, especially with small datasets.",
+    "code_example": "from tensorflow.keras.applications import VGG16\nbase_model = VGG16(weights='imagenet', include_top=False)",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "Why is ReLU preferred over sigmoid in deep networks?",
+    "answer": "ReLU does not suffer from vanishing gradient for positive values and is computationally simpler. Sigmoid squashes values between 0 and 1, causing very small gradients during backpropagation in deep networks, slowing training.",
+    "code_example": "from tensorflow.keras.layers import Activation\nActivation('relu')",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Hard",
+    "question": "What is the vanishing gradient problem?",
+    "answer": "In deep networks, gradients become extremely small as they are propagated backward through many layers, causing earlier layers to learn very slowly or stop learning. ReLU and batch normalization help mitigate this.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Hard",
+    "question": "What is the exploding gradient problem and how is it mitigated?",
+    "answer": "Exploding gradients occur when gradients grow extremely large during backpropagation, causing unstable updates and divergence. It is mitigated using gradient clipping, careful weight initialization, and batch normalization.",
+    "code_example": "tf.clip_by_norm(gradients, clip_norm=1.0)",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is batch normalization?",
+    "answer": "Batch normalization normalizes the input of each layer to have mean 0 and variance 1. This speeds up training, allows higher learning rates, and reduces sensitivity to weight initialization.",
+    "code_example": "from tensorflow.keras.layers import BatchNormalization\nmodel.add(BatchNormalization())",
+    "company_tags": [
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between CNN and RNN?",
+    "answer": "CNN is designed for spatial data like images, using convolutional filters to detect patterns. RNN is designed for sequential data like text or time series, using recurrent connections to maintain memory of previous inputs.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Hard",
+    "question": "What is an LSTM and why is it better than basic RNN?",
+    "answer": "LSTM (Long Short-Term Memory) is a type of RNN with gates that control information flow, allowing it to retain long-term dependencies. Basic RNNs suffer from vanishing gradients and struggle with long sequences.",
+    "code_example": "from tensorflow.keras.layers import LSTM\nmodel.add(LSTM(64))",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Easy",
+    "question": "What is an activation function?",
+    "answer": "An activation function introduces non-linearity into a neural network, allowing it to learn complex patterns. Common examples are ReLU, sigmoid, and tanh.",
+    "code_example": "",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is data augmentation?",
+    "answer": "Data augmentation artificially increases training data by applying transformations like rotation, flipping, zooming, or cropping to images. This helps the model generalize better and reduces overfitting.",
+    "code_example": "from tensorflow.keras.preprocessing.image import ImageDataGenerator\ndatagen = ImageDataGenerator(rotation_range=20)",
+    "company_tags": [
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the purpose of a pooling layer in CNN?",
+    "answer": "Pooling layers reduce the spatial dimensions of feature maps, decreasing computation and parameters while retaining important features. Max pooling takes the maximum value in each region, helping the model become more robust to small translations.",
+    "code_example": "from tensorflow.keras.layers import MaxPooling2D\nmodel.add(MaxPooling2D(pool_size=(2,2)))",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between max pooling and average pooling?",
+    "answer": "Max pooling selects the maximum value in each region of the feature map, preserving the most prominent features. Average pooling computes the mean, providing a smoother but potentially less distinctive representation.",
+    "code_example": "from tensorflow.keras.layers import AveragePooling2D",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is a convolution operation in CNN?",
+    "answer": "A convolution operation slides a small filter (kernel) across the input, computing dot products at each position to produce a feature map that highlights patterns like edges or textures.",
+    "code_example": "from tensorflow.keras.layers import Conv2D\nConv2D(32, kernel_size=(3,3), activation='relu')",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the role of stride in CNN?",
+    "answer": "Stride determines how many pixels the convolution filter moves at each step. A larger stride reduces the output size and computation but may miss finer details, while a stride of 1 preserves more spatial information.",
+    "code_example": "Conv2D(32, kernel_size=(3,3), strides=(2,2))",
+    "company_tags": [
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is padding in CNN and why is it used?",
+    "answer": "Padding adds extra pixels (usually zeros) around the input image border before convolution, allowing the filter to process edge pixels properly and controlling the output size. 'Same' padding keeps output size equal to input size.",
+    "code_example": "Conv2D(32, (3,3), padding='same')",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the role of the fully connected layer in a CNN?",
+    "answer": "The fully connected layer comes after convolutional and pooling layers, flattening the extracted features and connecting every neuron to every neuron in the next layer to perform the final classification or regression.",
+    "code_example": "from tensorflow.keras.layers import Flatten, Dense\nmodel.add(Flatten())\nmodel.add(Dense(10, activation='softmax'))",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Hard",
+    "question": "What is the difference between a 1x1 convolution and a regular convolution?",
+    "answer": "A 1x1 convolution operates only across channels at each spatial location without combining spatial neighbors, often used to reduce or increase the number of channels efficiently, as seen in architectures like Inception and ResNet bottleneck blocks.",
+    "code_example": "Conv2D(64, kernel_size=(1,1))",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the architecture of a typical RNN cell?",
+    "answer": "An RNN cell takes the current input and the previous hidden state, combines them through weighted connections and an activation function, and produces a new hidden state that is passed to the next time step and optionally used as output.",
+    "code_example": "from tensorflow.keras.layers import SimpleRNN\nmodel.add(SimpleRNN(64))",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Hard",
+    "question": "What are the gates in an LSTM cell and what do they do?",
+    "answer": "LSTM has three gates: the forget gate decides what information to discard from the cell state, the input gate decides what new information to add, and the output gate decides what part of the cell state to output as the hidden state.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is a GRU and how does it differ from LSTM?",
+    "answer": "A GRU (Gated Recurrent Unit) is a simplified version of LSTM that combines the forget and input gates into a single update gate and merges the cell state and hidden state, resulting in fewer parameters and faster training while often achieving similar performance.",
+    "code_example": "from tensorflow.keras.layers import GRU\nmodel.add(GRU(64))",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is a bidirectional RNN?",
+    "answer": "A bidirectional RNN processes the input sequence in both forward and backward directions, combining information from past and future context, useful for tasks like named entity recognition where future context helps.",
+    "code_example": "from tensorflow.keras.layers import Bidirectional, LSTM\nmodel.add(Bidirectional(LSTM(64)))",
+    "company_tags": [
+      "Google",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Hard",
+    "question": "What is the attention mechanism in deep learning?",
+    "answer": "The attention mechanism allows a model to focus on relevant parts of the input when producing each part of the output, computing weighted combinations of input representations based on learned relevance scores, forming the foundation of transformer models.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Hard",
+    "question": "What is self-attention?",
+    "answer": "Self-attention computes attention scores between all pairs of positions within the same sequence, allowing each token to attend to every other token, capturing long-range dependencies regardless of distance in the sequence.",
+    "code_example": "",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Hard",
+    "question": "What is the transformer architecture?",
+    "answer": "The transformer architecture uses stacked layers of self-attention and feed-forward networks, processing entire sequences in parallel rather than sequentially, enabling efficient training on large datasets and forming the basis for models like BERT and GPT.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is positional encoding in transformers?",
+    "answer": "Since transformers process tokens in parallel without inherent order information, positional encoding adds information about each token's position in the sequence, often using sine and cosine functions of different frequencies.",
+    "code_example": "",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is multi-head attention?",
+    "answer": "Multi-head attention runs multiple attention mechanisms in parallel, each learning to focus on different aspects of relationships between tokens, and concatenates their outputs to form a richer representation.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between encoder and decoder in a transformer?",
+    "answer": "The encoder processes the input sequence and produces contextualized representations, while the decoder generates the output sequence step by step, using both its own previous outputs and the encoder's representations through attention.",
+    "code_example": "",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is weight sharing in CNNs?",
+    "answer": "Weight sharing means the same filter weights are applied across all spatial locations of the input, drastically reducing the number of parameters compared to fully connected layers and enabling the network to detect the same feature anywhere in the image.",
+    "code_example": "",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the purpose of the softmax activation in the output layer?",
+    "answer": "Softmax converts raw output scores (logits) into a probability distribution over multiple classes, where all values sum to 1, enabling interpretation as class probabilities for multi-class classification.",
+    "code_example": "from tensorflow.keras.layers import Activation\nActivation('softmax')",
+    "company_tags": [
+      "Startup",
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between binary cross-entropy and categorical cross-entropy loss?",
+    "answer": "Binary cross-entropy is used for two-class classification problems with a sigmoid output. Categorical cross-entropy is used for multi-class classification with a softmax output, comparing predicted probability distributions to one-hot encoded true labels.",
+    "code_example": "from tensorflow.keras.losses import BinaryCrossentropy, CategoricalCrossentropy",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the Adam optimizer?",
+    "answer": "Adam (Adaptive Moment Estimation) combines momentum and adaptive learning rates by maintaining moving averages of both the gradients and their squared values, often converging faster and more reliably than plain SGD.",
+    "code_example": "from tensorflow.keras.optimizers import Adam\noptimizer = Adam(learning_rate=0.001)",
+    "company_tags": [
+      "Google",
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is momentum in gradient descent optimization?",
+    "answer": "Momentum accelerates gradient descent by adding a fraction of the previous update to the current update, helping the optimizer move through flat regions faster and reduce oscillations in steep, narrow valleys of the loss surface.",
+    "code_example": "from tensorflow.keras.optimizers import SGD\nSGD(learning_rate=0.01, momentum=0.9)",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between epoch and batch size in training a neural network?",
+    "answer": "An epoch is one complete pass through the entire training dataset. Batch size is the number of samples processed before the model's internal parameters are updated. A dataset of 1000 samples with batch size 100 has 10 batches per epoch.",
+    "code_example": "model.fit(X, y, epochs=10, batch_size=32)",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Hard",
+    "question": "What is the role of the learning rate scheduler?",
+    "answer": "A learning rate scheduler adjusts the learning rate during training, often decreasing it over time to allow large initial steps for fast progress and smaller steps later for fine-tuning convergence near the minimum.",
+    "code_example": "from tensorflow.keras.callbacks import ReduceLROnPlateau",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is image segmentation and how does it differ from image classification?",
+    "answer": "Image classification assigns a single label to an entire image. Image segmentation assigns a label to every pixel in the image, dividing it into regions corresponding to different objects or classes, useful for tasks like medical imaging and autonomous driving.",
+    "code_example": "",
+    "company_tags": [
+      "Startup",
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between semantic segmentation and instance segmentation?",
+    "answer": "Semantic segmentation labels each pixel with a class but does not distinguish between separate instances of the same class. Instance segmentation labels each pixel with a class and also distinguishes individual object instances, even if they belong to the same class.",
+    "code_example": "",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is object detection?",
+    "answer": "Object detection identifies and locates multiple objects within an image, typically outputting bounding boxes along with class labels and confidence scores for each detected object.",
+    "code_example": "",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Hard",
+    "question": "What is the difference between YOLO and R-CNN approaches to object detection?",
+    "answer": "YOLO (You Only Look Once) divides the image into a grid and predicts bounding boxes and classes in a single pass, making it very fast. R-CNN based approaches first propose regions of interest and then classify each region separately, generally being more accurate but slower.",
+    "code_example": "",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is an autoencoder?",
+    "answer": "An autoencoder is a neural network trained to reconstruct its input by first compressing it into a lower-dimensional latent representation (encoder) and then reconstructing the original input from this representation (decoder), useful for dimensionality reduction and anomaly detection.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Hard",
+    "question": "What is a variational autoencoder (VAE)?",
+    "answer": "A VAE is a generative model that learns a probabilistic latent space by encoding inputs as distributions rather than fixed points, allowing it to generate new samples by sampling from the latent distribution and decoding.",
+    "code_example": "",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Hard",
+    "question": "What is a Generative Adversarial Network (GAN)?",
+    "answer": "A GAN consists of two networks, a generator that creates fake data and a discriminator that tries to distinguish real from fake data, trained adversarially so the generator improves at producing realistic data over time.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Hard",
+    "question": "What is mode collapse in GANs?",
+    "answer": "Mode collapse occurs when a GAN's generator produces a limited variety of outputs, failing to capture the full diversity of the training data distribution, often because the generator finds a few outputs that consistently fool the discriminator.",
+    "code_example": "",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between a shallow network and a deep network?",
+    "answer": "A shallow network has only one or two hidden layers, limiting its ability to learn complex hierarchical representations. A deep network has many hidden layers, allowing it to learn increasingly abstract features at each layer.",
+    "code_example": "",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the universal approximation theorem?",
+    "answer": "The universal approximation theorem states that a feedforward neural network with a single hidden layer containing a sufficient number of neurons can approximate any continuous function to arbitrary accuracy, given appropriate activation functions.",
+    "code_example": "",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the purpose of weight regularization in neural networks?",
+    "answer": "Weight regularization adds a penalty to the loss function based on the magnitude of weights, discouraging overly large weights that can lead to overfitting and encouraging simpler models that generalize better.",
+    "code_example": "from tensorflow.keras.regularizers import l2\nDense(64, kernel_regularizer=l2(0.01))",
+    "company_tags": [
+      "Google",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the difference between training accuracy and validation accuracy diverging during training?",
+    "answer": "When training accuracy continues to increase while validation accuracy stagnates or decreases, it indicates overfitting, where the model is memorizing training data rather than learning generalizable patterns.",
+    "code_example": "",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Deep Learning",
+    "difficulty": "Medium",
+    "question": "What is the role of the embedding layer in deep learning?",
+    "answer": "An embedding layer maps discrete categorical inputs, such as words or item IDs, into dense continuous vector representations that capture semantic relationships, learned during training rather than being manually specified.",
+    "code_example": "from tensorflow.keras.layers import Embedding\nEmbedding(input_dim=10000, output_dim=128)",
+    "company_tags": [
+      "Google",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Easy",
+    "question": "What is tokenization?",
+    "answer": "Tokenization is the process of splitting text into smaller units called tokens, such as words or subwords, which can then be converted into numerical representations for models to process.",
+    "code_example": "from nltk.tokenize import word_tokenize\ntokens = word_tokenize('Hello world')",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Medium",
+    "question": "What is cosine similarity used for in NLP?",
+    "answer": "Cosine similarity measures the angle between two vectors to determine similarity in meaning. In NLP it compares text embeddings, with values closer to 1 indicating higher similarity.",
+    "code_example": "from sklearn.metrics.pairwise import cosine_similarity\nscore = cosine_similarity([vec1], [vec2])",
+    "company_tags": [
+      "Startup",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Medium",
+    "question": "What are word embeddings?",
+    "answer": "Word embeddings are dense vector representations of words that capture semantic meaning, such that words with similar meanings have similar vectors. Examples include Word2Vec, GloVe, and sentence-transformer embeddings.",
+    "code_example": "from sentence_transformers import SentenceTransformer\nmodel = SentenceTransformer('all-MiniLM-L6-v2')",
+    "company_tags": [
+      "Google",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Hard",
+    "question": "What is the transformer architecture?",
+    "answer": "The transformer architecture uses self-attention mechanisms to process sequences in parallel rather than sequentially, allowing it to capture long-range dependencies efficiently. It forms the basis of models like BERT and GPT.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Medium",
+    "question": "What is the difference between stemming and lemmatization?",
+    "answer": "Stemming reduces words to their root form by removing suffixes, often producing non-words, e.g. 'running' becomes 'run'. Lemmatization reduces words to their dictionary base form considering context, e.g. 'better' becomes 'good'.",
+    "code_example": "from nltk.stem import WordNetLemmatizer\nlemmatizer = WordNetLemmatizer()",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Medium",
+    "question": "What is RAG in NLP?",
+    "answer": "RAG (Retrieval Augmented Generation) retrieves relevant information from an external knowledge base before generating a response. This makes LLM outputs more accurate, grounded, and reduces hallucination.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Startup"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Hard",
+    "question": "What is the difference between BERT and GPT?",
+    "answer": "BERT is bidirectional and primarily used for understanding tasks like classification and question answering by looking at context from both directions. GPT is autoregressive and generates text by predicting the next token based on previous tokens.",
+    "code_example": "",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Medium",
+    "question": "What is a vector database used for?",
+    "answer": "A vector database stores embeddings and allows fast similarity search, finding the most semantically similar items to a query vector. Examples include ChromaDB, Pinecone, and FAISS, commonly used in RAG systems.",
+    "code_example": "from langchain_community.vectorstores import Chroma\nvectorstore = Chroma(persist_directory='db')",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Easy",
+    "question": "What is stop word removal?",
+    "answer": "Stop word removal eliminates common words like 'the', 'is', and 'and' that carry little semantic meaning, reducing noise and dimensionality before further text processing, though some modern embedding models handle stop words automatically.",
+    "code_example": "from nltk.corpus import stopwords\nstop_words = set(stopwords.words('english'))",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Medium",
+    "question": "What is named entity recognition (NER)?",
+    "answer": "NER identifies and classifies named entities in text into predefined categories such as person names, organizations, locations, and dates, useful for information extraction tasks.",
+    "code_example": "import spacy\nnlp = spacy.load('en_core_web_sm')\ndoc = nlp(text)",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Medium",
+    "question": "What is sentiment analysis?",
+    "answer": "Sentiment analysis is the task of determining the emotional tone of a piece of text, typically classifying it as positive, negative, or neutral, used in applications like product review analysis and social media monitoring.",
+    "code_example": "",
+    "company_tags": [
+      "Startup",
+      "Flipkart"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Medium",
+    "question": "What is TF-IDF?",
+    "answer": "TF-IDF (Term Frequency-Inverse Document Frequency) measures how important a word is to a document relative to a collection of documents, giving higher weight to words that are frequent in a document but rare across the corpus.",
+    "code_example": "from sklearn.feature_extraction.text import TfidfVectorizer\nvectorizer = TfidfVectorizer()",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Medium",
+    "question": "What is the difference between TF-IDF and word embeddings?",
+    "answer": "TF-IDF produces sparse, high-dimensional vectors based purely on word frequency statistics without capturing semantic meaning. Word embeddings produce dense, lower-dimensional vectors that capture semantic relationships between words learned from large text corpora.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Startup"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Hard",
+    "question": "What is the role of the encoder in a RAG pipeline?",
+    "answer": "In a RAG pipeline, the encoder converts both the documents in the knowledge base and the user's query into embeddings in the same vector space, enabling similarity search to retrieve the most relevant documents for the query.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Startup"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Medium",
+    "question": "What is chunking in the context of document processing for RAG?",
+    "answer": "Chunking splits large documents into smaller segments, typically a few hundred words with some overlap, so that each chunk can be embedded and retrieved independently, allowing more precise matching to user queries.",
+    "code_example": "from langchain.text_splitter import RecursiveCharacterTextSplitter\nsplitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Medium",
+    "question": "What is the difference between extractive and abstractive text summarization?",
+    "answer": "Extractive summarization selects and combines important sentences directly from the source text. Abstractive summarization generates new sentences that capture the meaning of the source text, potentially using words not present in the original.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Startup"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Medium",
+    "question": "What is perplexity in language models?",
+    "answer": "Perplexity measures how well a language model predicts a sample of text, calculated as the exponential of the average negative log likelihood of the predicted tokens. Lower perplexity indicates the model is less surprised by the actual text, suggesting better performance.",
+    "code_example": "",
+    "company_tags": [
+      "Google"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Medium",
+    "question": "What is the difference between intent recognition and entity extraction in a chatbot system?",
+    "answer": "Intent recognition determines what the user wants to accomplish, such as 'book a flight'. Entity extraction identifies specific pieces of information within the input, such as the destination city or travel date, both working together to fulfill the user's request.",
+    "code_example": "",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Medium",
+    "question": "What is hallucination in the context of large language models?",
+    "answer": "Hallucination refers to a language model generating text that is factually incorrect, fabricated, or not grounded in the provided source material, while still sounding fluent and confident, a key challenge RAG aims to reduce.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "NLP",
+    "difficulty": "Hard",
+    "question": "What is the difference between prompt engineering and fine-tuning for adapting an LLM to a specific task?",
+    "answer": "Prompt engineering crafts the input instructions and examples given to a pretrained model without changing its weights, useful for quick adaptation. Fine-tuning updates the model's weights using task-specific data, often yielding better performance for specialized tasks but requiring more resources.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is a p-value?",
+    "answer": "A p-value measures the probability of obtaining results at least as extreme as observed, assuming the null hypothesis is true. A p-value less than 0.05 typically leads to rejecting the null hypothesis.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Easy",
+    "question": "What is the difference between mean, median, and mode?",
+    "answer": "Mean is the average of all values. Median is the middle value when data is sorted. Mode is the most frequently occurring value. Each gives a different view of central tendency.",
+    "code_example": "import numpy as np\nnp.mean(data), np.median(data)",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is the Central Limit Theorem?",
+    "answer": "The Central Limit Theorem states that the sampling distribution of the sample mean approaches a normal distribution as the sample size increases, regardless of the original population distribution.",
+    "code_example": "",
+    "company_tags": [
+      "Deloitte",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is the difference between Type I and Type II error?",
+    "answer": "Type I error is rejecting a true null hypothesis, also called a false positive. Type II error is failing to reject a false null hypothesis, also called a false negative.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Hard",
+    "question": "What is the difference between correlation and causation?",
+    "answer": "Correlation measures the statistical relationship between two variables, indicating they move together. Causation means one variable directly causes a change in another. Correlation does not imply causation.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is standard deviation?",
+    "answer": "Standard deviation measures the spread or dispersion of data points around the mean. A higher standard deviation means data is more spread out, while a lower value means data points are closer to the mean.",
+    "code_example": "import numpy as np\nnp.std(data)",
+    "company_tags": [
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is a normal distribution?",
+    "answer": "A normal distribution is a symmetric, bell-shaped probability distribution where most values cluster around the mean. Many statistical methods assume data follows a normal distribution.",
+    "code_example": "import numpy as np\ndata = np.random.normal(0, 1, 1000)",
+    "company_tags": [
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is the difference between population and sample in statistics?",
+    "answer": "A population includes all members of a defined group being studied. A sample is a subset of the population selected for analysis, used to make inferences about the population because studying the entire population is often impractical.",
+    "code_example": "",
+    "company_tags": [
+      "Deloitte",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is a confidence interval?",
+    "answer": "A confidence interval is a range of values, derived from sample data, that is likely to contain the true population parameter with a specified level of confidence, such as 95%, accounting for sampling variability.",
+    "code_example": "",
+    "company_tags": [
+      "Deloitte",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is the difference between a one-tailed and two-tailed hypothesis test?",
+    "answer": "A one-tailed test checks for an effect in only one direction, such as whether a value is greater than a threshold. A two-tailed test checks for an effect in either direction, such as whether a value is different from a threshold, regardless of direction.",
+    "code_example": "",
+    "company_tags": [
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is the difference between discrete and continuous probability distributions?",
+    "answer": "A discrete probability distribution describes outcomes that take on a countable number of distinct values, like the number of heads in coin flips. A continuous probability distribution describes outcomes that can take any value within a range, like height or weight.",
+    "code_example": "",
+    "company_tags": [
+      "TCS",
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is conditional probability?",
+    "answer": "Conditional probability is the probability of an event occurring given that another event has already occurred, denoted P(A|B), calculated as the probability of both events occurring divided by the probability of the conditioning event.",
+    "code_example": "",
+    "company_tags": [
+      "Deloitte",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Hard",
+    "question": "What is Bayes' theorem?",
+    "answer": "Bayes' theorem describes how to update the probability of a hypothesis based on new evidence, expressed as P(A|B) = P(B|A) * P(A) / P(B), forming the foundation for Bayesian inference and algorithms like Naive Bayes.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is skewness in a data distribution?",
+    "answer": "Skewness measures the asymmetry of a data distribution. Positive skew means the tail on the right side is longer, while negative skew means the tail on the left side is longer, indicating the data is not symmetric around the mean.",
+    "code_example": "from scipy.stats import skew\nskew(data)",
+    "company_tags": [
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is the difference between variance and standard deviation?",
+    "answer": "Variance is the average of squared differences from the mean, expressed in squared units. Standard deviation is the square root of variance, expressed in the same units as the original data, making it more interpretable.",
+    "code_example": "import numpy as np\nnp.var(data), np.std(data)",
+    "company_tags": [
+      "TCS",
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Hard",
+    "question": "What is the difference between a parametric test and a non-parametric test?",
+    "answer": "A parametric test assumes the data follows a specific distribution, usually normal, and tests hypotheses about distribution parameters like the mean, e.g. t-test. A non-parametric test makes no such distributional assumptions and is used when data does not meet parametric assumptions, e.g. Mann-Whitney U test.",
+    "code_example": "",
+    "company_tags": [
+      "Deloitte",
+      "Google"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is the difference between covariance and correlation?",
+    "answer": "Covariance measures how two variables change together but its magnitude depends on the units of the variables. Correlation normalizes covariance to a value between -1 and 1, making it easier to interpret the strength and direction of the relationship independent of units.",
+    "code_example": "import numpy as np\nnp.cov(x, y)\nnp.corrcoef(x, y)",
+    "company_tags": [
+      "Deloitte",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is sampling bias?",
+    "answer": "Sampling bias occurs when the sample collected does not accurately represent the population from which it is drawn, due to the sampling method, leading to systematically skewed conclusions about the population.",
+    "code_example": "",
+    "company_tags": [
+      "Deloitte",
+      "Flipkart"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Medium",
+    "question": "What is the law of large numbers?",
+    "answer": "The law of large numbers states that as the size of a sample increases, the sample mean gets closer to the expected value (population mean), explaining why larger samples generally give more reliable estimates.",
+    "code_example": "",
+    "company_tags": [
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "Statistics",
+    "difficulty": "Hard",
+    "question": "What is an A/B test and how is statistical significance determined in it?",
+    "answer": "An A/B test compares two variants by randomly assigning users to each group and measuring a target metric. Statistical significance is determined using hypothesis tests, such as a t-test or chi-square test, computing a p-value to assess whether observed differences are likely due to chance.",
+    "code_example": "from scipy import stats\nstats.ttest_ind(group_a, group_b)",
+    "company_tags": [
+      "Amazon",
+      "Flipkart"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Easy",
+    "question": "What is the difference between a list and a tuple in Python?",
+    "answer": "Lists are mutable, meaning elements can be changed after creation. Tuples are immutable, meaning once created their elements cannot be changed. Tuples are generally faster than lists.",
+    "code_example": "my_list = [1,2,3]\nmy_tuple = (1,2,3)",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Easy",
+    "question": "What is the difference between a list and a dictionary?",
+    "answer": "A list is an ordered collection of items accessed by index. A dictionary is a collection of key-value pairs accessed by unique keys, allowing faster lookups for specific data.",
+    "code_example": "my_list = [1,2,3]\nmy_dict = {'a':1,'b':2}",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What are Python decorators?",
+    "answer": "Decorators are functions that modify the behavior of another function without changing its code. They are applied using the @ symbol and are commonly used for logging, timing, and access control.",
+    "code_example": "def decorator(func):\n    def wrapper():\n        print('Before')\n        func()\n    return wrapper",
+    "company_tags": [
+      "Microsoft",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the difference between deep copy and shallow copy?",
+    "answer": "A shallow copy creates a new object but references the same nested objects as the original. A deep copy creates a new object and recursively copies all nested objects, so changes to one do not affect the other.",
+    "code_example": "import copy\ndeep = copy.deepcopy(original)",
+    "company_tags": [
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What are *args and **kwargs used for?",
+    "answer": "*args allows a function to accept any number of positional arguments as a tuple. **kwargs allows a function to accept any number of keyword arguments as a dictionary, providing flexibility in function definitions.",
+    "code_example": "def func(*args, **kwargs):\n    print(args, kwargs)",
+    "company_tags": [
+      "Startup",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Hard",
+    "question": "What is the Global Interpreter Lock (GIL) in Python?",
+    "answer": "The GIL is a mutex that allows only one thread to execute Python bytecode at a time, even on multi-core systems. This limits true parallelism in multi-threaded Python programs, though multiprocessing can bypass it.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is a lambda function in Python?",
+    "answer": "A lambda function is a small anonymous function defined with the lambda keyword, useful for short operations passed as arguments to functions like map, filter, or sorted.",
+    "code_example": "square = lambda x: x*x\nprint(square(5))",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Easy",
+    "question": "What is the difference between '==' and 'is' in Python?",
+    "answer": "'==' checks whether two objects have the same value, while 'is' checks whether two variables refer to the exact same object in memory.",
+    "code_example": "a = [1,2]\nb = [1,2]\nprint(a == b)  # True\nprint(a is b)  # False",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is a generator in Python and how does it differ from a normal function?",
+    "answer": "A generator is a function that uses 'yield' instead of 'return', producing values one at a time and pausing its state between calls, making it memory efficient for large or infinite sequences compared to returning a full list at once.",
+    "code_example": "def gen():\n    for i in range(5):\n        yield i",
+    "company_tags": [
+      "Microsoft",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is list comprehension and why is it useful?",
+    "answer": "List comprehension provides a concise syntax to create lists by applying an expression to each item in an iterable, optionally with a condition, making code shorter and often faster than equivalent for-loops.",
+    "code_example": "squares = [x*x for x in range(10) if x % 2 == 0]",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the difference between a shallow function argument default of a mutable type and an immutable type?",
+    "answer": "Using a mutable default argument like a list is dangerous because the same object is shared across all calls, persisting changes between calls. Immutable defaults like None or integers do not have this issue since they cannot be modified in place.",
+    "code_example": "def func(items=None):\n    if items is None:\n        items = []",
+    "company_tags": [
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the difference between a class method, static method, and instance method?",
+    "answer": "An instance method takes 'self' and operates on instance data. A class method takes 'cls' and operates on class-level data, decorated with @classmethod. A static method takes neither and behaves like a regular function placed inside a class, decorated with @staticmethod.",
+    "code_example": "class A:\n    @staticmethod\n    def static_m(): pass\n    @classmethod\n    def class_m(cls): pass",
+    "company_tags": [
+      "Microsoft",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is exception handling in Python and how is it implemented?",
+    "answer": "Exception handling allows a program to respond to runtime errors gracefully using try, except, else, and finally blocks, preventing the program from crashing and allowing custom error responses.",
+    "code_example": "try:\n    x = 1/0\nexcept ZeroDivisionError as e:\n    print('Error:', e)",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the difference between '__init__' and '__new__' in Python classes?",
+    "answer": "'__new__' is responsible for creating a new instance of a class and is called before '__init__'. '__init__' initializes the already-created instance by setting its attributes. '__new__' is rarely overridden except for special cases like singletons or immutable types.",
+    "code_example": "",
+    "company_tags": [
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the purpose of the 'with' statement in Python?",
+    "answer": "The 'with' statement simplifies resource management by automatically handling setup and cleanup, such as opening and closing files, even if an exception occurs, using context managers.",
+    "code_example": "with open('file.txt') as f:\n    data = f.read()",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the difference between multiprocessing and multithreading in Python?",
+    "answer": "Multithreading runs multiple threads within the same process sharing memory, but is limited by the GIL for CPU-bound tasks. Multiprocessing runs separate processes with their own memory space, bypassing the GIL and enabling true parallelism for CPU-bound tasks.",
+    "code_example": "from multiprocessing import Pool\nfrom threading import Thread",
+    "company_tags": [
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the difference between a set and a list in Python?",
+    "answer": "A set is an unordered collection of unique elements with fast membership testing, while a list is an ordered collection that allows duplicate elements and maintains insertion order.",
+    "code_example": "my_set = {1,2,3}\nmy_list = [1,2,2,3]",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What are Python virtual environments and why are they used?",
+    "answer": "Virtual environments create isolated Python environments with their own installed packages, preventing version conflicts between different projects that may require different versions of the same library.",
+    "code_example": "python -m venv myenv\nsource myenv/bin/activate",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Hard",
+    "question": "What is the difference between '__str__' and '__repr__' in Python?",
+    "answer": "'__str__' returns a human-readable string representation of an object, intended for end users. '__repr__' returns an unambiguous string representation intended for developers, ideally one that could recreate the object, used by default in interactive shells.",
+    "code_example": "class A:\n    def __str__(self): return 'readable'\n    def __repr__(self): return 'A()'",
+    "company_tags": [
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the purpose of the 'enumerate' function in Python?",
+    "answer": "'enumerate' adds a counter to an iterable, returning pairs of index and value, useful for accessing both the position and the element while looping without manually managing an index variable.",
+    "code_example": "for i, val in enumerate(['a','b','c']):\n    print(i, val)",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the difference between 'append' and 'extend' for Python lists?",
+    "answer": "'append' adds a single element to the end of a list, even if that element is itself a list. 'extend' adds each element of an iterable individually to the end of the list.",
+    "code_example": "a = [1,2]\na.append([3,4])  # [1,2,[3,4]]\nb = [1,2]\nb.extend([3,4])  # [1,2,3,4]",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the purpose of the 'zip' function in Python?",
+    "answer": "'zip' combines multiple iterables element-wise into tuples, stopping at the shortest iterable, commonly used to iterate over multiple lists in parallel.",
+    "code_example": "for a, b in zip([1,2,3], ['a','b','c']):\n    print(a, b)",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Hard",
+    "question": "What is monkey patching in Python?",
+    "answer": "Monkey patching refers to dynamically modifying or extending a class or module at runtime, such as adding or replacing methods, often used for testing or fixing third-party library behavior without modifying its source code.",
+    "code_example": "",
+    "company_tags": [
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the difference between 'is None' and '== None' for checking null values in Python?",
+    "answer": "'is None' checks identity, confirming the variable is exactly the singleton None object, which is the recommended and faster approach. '== None' checks equality, which works correctly for None but can be overridden by custom '__eq__' methods in other objects, making 'is None' safer.",
+    "code_example": "if x is None:\n    pass",
+    "company_tags": [
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the purpose of f-strings in Python?",
+    "answer": "f-strings provide a concise and readable way to embed expressions inside string literals using curly braces, prefixed with 'f', evaluated at runtime, introduced in Python 3.6.",
+    "code_example": "name = 'Sejal'\nprint(f'Hello {name}')",
+    "company_tags": [
+      "Startup"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the purpose of try-except-else-finally blocks?",
+    "answer": "The 'try' block contains code that might raise an exception, 'except' handles specific exceptions, 'else' runs if no exception occurred, and 'finally' always runs regardless of whether an exception occurred, often used for cleanup.",
+    "code_example": "try:\n    x = 1\nexcept Exception:\n    pass\nelse:\n    print('no error')\nfinally:\n    print('done')",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the difference between mutable and immutable data types in Python with examples?",
+    "answer": "Mutable data types can be changed after creation, such as lists, dictionaries, and sets. Immutable data types cannot be changed after creation, such as integers, strings, floats, and tuples; any 'modification' creates a new object.",
+    "code_example": "",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the purpose of the 'pickle' module in Python?",
+    "answer": "The pickle module serializes and deserializes Python objects into a byte stream, allowing objects like trained models, dictionaries, or custom classes to be saved to disk and loaded later.",
+    "code_example": "import pickle\npickle.dump(model, open('model.pkl','wb'))\nmodel = pickle.load(open('model.pkl','rb'))",
+    "company_tags": [
+      "Startup",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Medium",
+    "question": "What is the difference between synchronous and asynchronous programming in Python?",
+    "answer": "Synchronous programming executes tasks sequentially, blocking until each completes. Asynchronous programming, using async/await, allows tasks to run concurrently by yielding control during waiting periods, improving efficiency for I/O-bound operations.",
+    "code_example": "import asyncio\nasync def fetch():\n    await asyncio.sleep(1)",
+    "company_tags": [
+      "Microsoft",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Easy",
+    "question": "What is the difference between INNER JOIN and LEFT JOIN?",
+    "answer": "INNER JOIN returns only matching rows from both tables. LEFT JOIN returns all rows from the left table and matching rows from the right table, with NULLs where there is no match.",
+    "code_example": "SELECT * FROM A INNER JOIN B ON A.id = B.id;",
+    "company_tags": [
+      "TCS",
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is the difference between WHERE and HAVING?",
+    "answer": "WHERE filters rows before grouping is applied. HAVING filters groups after the GROUP BY clause, often used with aggregate functions like COUNT or SUM.",
+    "code_example": "SELECT dept, COUNT(*) FROM emp GROUP BY dept HAVING COUNT(*) > 5;",
+    "company_tags": [
+      "Amazon",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is a primary key and a foreign key?",
+    "answer": "A primary key uniquely identifies each record in a table and cannot be null. A foreign key is a field in one table that references the primary key in another table, establishing a relationship between tables.",
+    "code_example": "",
+    "company_tags": [
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is the difference between UNION and UNION ALL?",
+    "answer": "UNION combines results of two queries and removes duplicate rows. UNION ALL combines results without removing duplicates, making it faster when duplicates are acceptable.",
+    "code_example": "SELECT name FROM A UNION SELECT name FROM B;",
+    "company_tags": [
+      "TCS"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Hard",
+    "question": "What is a window function in SQL?",
+    "answer": "A window function performs calculations across a set of rows related to the current row without collapsing them into a single output, unlike GROUP BY. Examples include RANK, ROW_NUMBER, and running totals.",
+    "code_example": "SELECT name, salary, RANK() OVER (ORDER BY salary DESC) FROM emp;",
+    "company_tags": [
+      "Amazon",
+      "Google"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Easy",
+    "question": "What is the difference between DELETE, TRUNCATE, and DROP?",
+    "answer": "DELETE removes specific rows based on a condition and can be rolled back. TRUNCATE removes all rows from a table quickly without logging individual row deletions. DROP removes the entire table structure along with its data.",
+    "code_example": "DELETE FROM emp WHERE id=1;\nTRUNCATE TABLE emp;\nDROP TABLE emp;",
+    "company_tags": [
+      "TCS",
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is a subquery in SQL?",
+    "answer": "A subquery is a query nested inside another query, used to perform operations that require results from one query to be used in another, such as filtering based on an aggregate value.",
+    "code_example": "SELECT name FROM emp WHERE salary > (SELECT AVG(salary) FROM emp);",
+    "company_tags": [
+      "TCS",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is the difference between a correlated subquery and a regular subquery?",
+    "answer": "A regular subquery executes independently and returns a result used by the outer query. A correlated subquery references columns from the outer query and is executed once for each row processed by the outer query.",
+    "code_example": "SELECT name FROM emp e WHERE salary > (SELECT AVG(salary) FROM emp WHERE dept = e.dept);",
+    "company_tags": [
+      "Amazon",
+      "Google"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is normalization in databases?",
+    "answer": "Normalization is the process of organizing database tables to reduce data redundancy and improve data integrity, by dividing large tables into smaller related tables and defining relationships between them, following normal forms like 1NF, 2NF, and 3NF.",
+    "code_example": "",
+    "company_tags": [
+      "Deloitte",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is denormalization and when is it used?",
+    "answer": "Denormalization combines tables or adds redundant data to improve read performance, at the cost of some data redundancy, often used in data warehouses or reporting systems where read speed matters more than write efficiency.",
+    "code_example": "",
+    "company_tags": [
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is an index in SQL and how does it improve performance?",
+    "answer": "An index is a data structure that improves the speed of data retrieval operations on a table by allowing the database to find rows faster, similar to a lookup table, at the cost of additional storage and slower writes.",
+    "code_example": "CREATE INDEX idx_name ON emp(name);",
+    "company_tags": [
+      "Amazon",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is the difference between a clustered and non-clustered index?",
+    "answer": "A clustered index determines the physical order of data in a table, and a table can have only one. A non-clustered index creates a separate structure that points to the physical rows, and a table can have multiple non-clustered indexes.",
+    "code_example": "",
+    "company_tags": [
+      "Microsoft",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is the GROUP BY clause used for?",
+    "answer": "GROUP BY groups rows that have the same values in specified columns into summary rows, often used with aggregate functions like COUNT, SUM, AVG, MIN, and MAX to compute statistics for each group.",
+    "code_example": "SELECT dept, AVG(salary) FROM emp GROUP BY dept;",
+    "company_tags": [
+      "TCS",
+      "Startup"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is the difference between a self join and a regular join?",
+    "answer": "A self join joins a table to itself, treating it as two separate tables using aliases, useful for comparing rows within the same table, such as finding employees who share the same manager.",
+    "code_example": "SELECT a.name, b.name FROM emp a JOIN emp b ON a.manager_id = b.id;",
+    "company_tags": [
+      "Amazon",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is the purpose of the LIMIT or TOP clause?",
+    "answer": "LIMIT (in MySQL/PostgreSQL) or TOP (in SQL Server) restricts the number of rows returned by a query, often used with ORDER BY to retrieve the top N records based on some criteria.",
+    "code_example": "SELECT * FROM emp ORDER BY salary DESC LIMIT 5;",
+    "company_tags": [
+      "TCS",
+      "Startup"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Hard",
+    "question": "What is the difference between a stored procedure and a function in SQL?",
+    "answer": "A stored procedure can perform actions like inserting or updating data and may not return a value, or can return multiple values via output parameters. A function must return a single value and can be used within SQL expressions, but typically cannot modify database state.",
+    "code_example": "CREATE FUNCTION get_total() RETURNS INT...",
+    "company_tags": [
+      "Microsoft",
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is a transaction in SQL and what does ACID stand for?",
+    "answer": "A transaction is a sequence of operations performed as a single logical unit of work. ACID stands for Atomicity, Consistency, Isolation, and Durability, properties that guarantee reliable processing of database transactions.",
+    "code_example": "BEGIN TRANSACTION;\n...\nCOMMIT;",
+    "company_tags": [
+      "Deloitte",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is the difference between COUNT(*), COUNT(column), and COUNT(DISTINCT column)?",
+    "answer": "COUNT(*) counts all rows including nulls. COUNT(column) counts non-null values in that column. COUNT(DISTINCT column) counts the number of unique non-null values in that column.",
+    "code_example": "SELECT COUNT(*), COUNT(email), COUNT(DISTINCT dept) FROM emp;",
+    "company_tags": [
+      "TCS",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is the purpose of the CASE statement in SQL?",
+    "answer": "The CASE statement allows conditional logic within SQL queries, returning different values based on specified conditions, similar to if-else logic in programming languages.",
+    "code_example": "SELECT name, CASE WHEN salary > 50000 THEN 'High' ELSE 'Low' END FROM emp;",
+    "company_tags": [
+      "TCS",
+      "Startup"
+    ]
+  },
+  {
+    "topic": "SQL",
+    "difficulty": "Medium",
+    "question": "What is the difference between OLTP and OLAP databases?",
+    "answer": "OLTP (Online Transaction Processing) databases handle frequent, small read/write operations for day-to-day transactions, optimized for speed and consistency. OLAP (Online Analytical Processing) databases handle complex queries over large datasets for analysis and reporting, optimized for read-heavy aggregations.",
+    "code_example": "",
+    "company_tags": [
+      "Deloitte",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What are the main components of a machine learning system in production?",
+    "answer": "A production ML system typically includes data ingestion, data preprocessing, feature store, model training pipeline, model registry, serving infrastructure, monitoring, and a feedback loop for retraining.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is a feature store and why is it useful?",
+    "answer": "A feature store is a centralized repository that stores, manages, and serves features for both training and serving, ensuring consistency between training and inference and enabling feature reuse across multiple models.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Google"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is the difference between online and offline feature computation?",
+    "answer": "Offline feature computation processes large batches of historical data to generate features for training, often using distributed systems like Spark. Online feature computation generates features in real time from live data for inference, requiring low latency.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Hard",
+    "question": "What is training-serving skew and how do you prevent it?",
+    "answer": "Training-serving skew occurs when the data distribution or feature computation differs between training and production serving, causing model performance to degrade. It is prevented by using the same feature pipeline and feature store for both training and serving.",
+    "code_example": "",
+    "company_tags": [
+      "Google",
+      "Amazon"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is the difference between batch prediction and real-time prediction architectures?",
+    "answer": "Batch prediction architectures precompute predictions for all entities periodically and store results for later retrieval, suitable for non-urgent use cases. Real-time prediction architectures serve predictions on demand via an API, required when predictions depend on the latest user context.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Google"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is model serving and what tools are commonly used for it?",
+    "answer": "Model serving exposes a trained model as an API endpoint that accepts input data and returns predictions. Common tools include TensorFlow Serving, TorchServe, FastAPI with custom endpoints, and managed services like AWS SageMaker or Google Vertex AI.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is the role of a model registry?",
+    "answer": "A model registry tracks trained model versions along with their metadata, such as training data, hyperparameters, and performance metrics, enabling version control, comparison, and controlled promotion of models to production.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Hard",
+    "question": "What is A/B testing in ML system design and how is it implemented at scale?",
+    "answer": "A/B testing in ML system design routes a portion of production traffic to a new model version while the rest continues using the existing model, comparing business metrics between groups. It is implemented using traffic splitting at the API gateway or load balancer level with consistent user bucketing.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Flipkart"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is model monitoring and what metrics are typically tracked?",
+    "answer": "Model monitoring continuously tracks a deployed model's performance and health, typically including prediction latency, throughput, error rates, input data distribution drift, and prediction distribution drift, alerting teams when issues arise.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Hard",
+    "question": "What is data drift and how is it detected in production ML systems?",
+    "answer": "Data drift occurs when the statistical properties of input data in production differ from the data the model was trained on. It is detected by comparing distributions of incoming features against training data distributions using statistical tests like Kolmogorov-Smirnov test or population stability index.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Google"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is the difference between horizontal and vertical scaling for ML serving infrastructure?",
+    "answer": "Horizontal scaling adds more machines or instances to handle increased load, distributing requests across them. Vertical scaling increases the resources, such as CPU or memory, of a single machine. Horizontal scaling is generally preferred for ML serving due to better fault tolerance and flexibility.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is the role of a load balancer in an ML serving architecture?",
+    "answer": "A load balancer distributes incoming prediction requests across multiple model serving instances, preventing any single instance from becoming a bottleneck and providing redundancy if an instance fails.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is caching and how can it improve an ML system's performance?",
+    "answer": "Caching stores frequently requested predictions or intermediate results so they can be returned quickly without recomputation, reducing latency and load on the model serving infrastructure for repeated or popular queries.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Flipkart"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Hard",
+    "question": "How would you design a recommendation system for an e-commerce platform at a high level?",
+    "answer": "A recommendation system would typically include a data pipeline collecting user interactions, a candidate generation stage using collaborative filtering or embeddings to shortlist relevant items, a ranking model to order candidates based on predicted relevance, and a serving layer with caching for low latency, along with continuous monitoring and retraining.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Flipkart",
+      "Google"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is the role of a message queue like Kafka in ML pipelines?",
+    "answer": "A message queue like Kafka decouples data producers from consumers, enabling reliable, scalable streaming of events such as user interactions or sensor data into downstream systems for real-time feature computation, model training, or monitoring.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is the difference between a monolithic ML architecture and a microservices-based ML architecture?",
+    "answer": "A monolithic architecture bundles data processing, model training, and serving into a single application, simpler to develop but harder to scale individual components. A microservices architecture separates these into independent services that can be developed, deployed, and scaled independently.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is the role of containerization (e.g., Docker) in deploying ML models?",
+    "answer": "Containerization packages a model along with its dependencies, runtime, and configuration into a portable container, ensuring consistent behavior across different environments from development to production and simplifying deployment and scaling.",
+    "code_example": "docker build -t my-model .\ndocker run -p 8080:8080 my-model",
+    "company_tags": [
+      "Amazon",
+      "Google",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is CI/CD in the context of machine learning, often called MLOps?",
+    "answer": "CI/CD for ML automates the process of testing, validating, and deploying both code and models, including steps like automated retraining, model evaluation against benchmarks, and gradual rollout, ensuring reliable and repeatable updates to production ML systems.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Microsoft",
+      "Google"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Hard",
+    "question": "How would you design a system to detect fraudulent transactions in real time?",
+    "answer": "Such a system would ingest transaction events via a streaming pipeline like Kafka, compute real-time features such as transaction frequency and amount patterns, score transactions using a low-latency model, flag high-risk transactions for blocking or review, and continuously retrain the model using labeled fraud outcomes while monitoring for data drift.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Google"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is shadow deployment in ML model rollout strategies?",
+    "answer": "Shadow deployment runs a new model alongside the existing production model on live traffic without affecting actual responses to users, allowing teams to compare the new model's predictions against the current model and validate performance before fully switching over.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Google"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is canary deployment in the context of ML model rollouts?",
+    "answer": "Canary deployment gradually rolls out a new model to a small percentage of production traffic first, monitoring its performance, and incrementally increasing traffic if it performs well, reducing risk compared to switching all traffic at once.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Microsoft"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is the role of latency requirements in choosing a model architecture for production?",
+    "answer": "Strict latency requirements, such as under 100ms for real-time recommendations, may require choosing smaller or optimized models, using techniques like quantization or distillation, or precomputing results, whereas offline batch use cases can use larger, more accurate models without latency constraints.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Google"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is the purpose of logging predictions and inputs in a production ML system?",
+    "answer": "Logging predictions and inputs enables auditing, debugging unexpected behavior, building datasets for retraining, detecting data drift, and supporting compliance requirements in regulated industries.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Deloitte"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Hard",
+    "question": "How would you design a system to keep an AI chatbot's knowledge base up to date using RAG?",
+    "answer": "Such a system would have a document ingestion pipeline that monitors a source location for new or updated documents, automatically chunks and embeds new content, updates the vector database, and optionally removes outdated embeddings, allowing the chatbot's retrieval results to reflect the latest content without retraining the underlying LLM.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Startup",
+      "Google"
+    ]
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Easy",
+    "question": "What is the difference between a shallow function and a recursive function in Python?",
+    "answer": "A regular function performs a task in a single pass without calling itself. A recursive function calls itself with a smaller input until reaching a base case, useful for problems with naturally recursive structure like tree traversal or factorial computation.",
+    "code_example": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n-1)",
+    "company_tags": [
+      "Startup",
+      "TCS"
+    ]
+  },
+  {
+    "topic": "System Design for ML",
+    "difficulty": "Medium",
+    "question": "What is the role of an API gateway in an ML system architecture?",
+    "answer": "An API gateway acts as a single entry point for client requests, handling tasks like authentication, rate limiting, request routing to appropriate model services, and logging, simplifying the architecture for clients consuming ML predictions.",
+    "code_example": "",
+    "company_tags": [
+      "Amazon",
+      "Microsoft"
+    ]
+  }
+]
