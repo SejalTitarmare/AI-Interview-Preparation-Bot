@@ -1,0 +1,24 @@
+timestamp,topic,question,score
+2026-06-17 12:14:18,Deep Learning,What is mode collapse in GANs?,8.7
+2026-06-17 12:16:56,SQL,What is the purpose of the LIMIT or TOP clause?,6.6
+2026-06-17 12:17:33,NLP,What is sentiment analysis?,9.2
+2026-06-17 12:17:43,Machine Learning,What is hyperparameter tuning?,0.0
+2026-06-17 12:19:01,SQL,What is the difference between INNER JOIN and LEFT JOIN?,9.6
+2026-06-17 12:20:18,Deep Learning,What is a neural network?,2.2
+2026-06-17 12:20:45,NLP,What is the difference between prompt engineering and fine-tuning for adapting a,7.5
+2026-06-17 12:21:12,Python,What is the purpose of f-strings in Python?,-1.0
+2026-06-17 12:22:09,Statistics,What is sampling bias?,8.5
+2026-06-17 12:22:54,System Design for ML,What is the purpose of logging predictions and inputs in a production ML system?,7.6
+2026-06-17 18:07:51,Statistics,What is a normal distribution?,0.0
+2026-06-17 18:07:57,Deep Learning,What is the difference between CNN and RNN?,0.0
+2026-06-17 18:08:04,Python,What is the difference between a shallow function argument default of a mutable ,0.0
+2026-06-17 18:08:09,Deep Learning,What is the architecture of a typical RNN cell?,0.0
+2026-06-17 18:08:15,Machine Learning,What is one-hot encoding?,0.0
+2026-06-17 18:08:22,Python,What is the difference between mutable and immutable data types in Python with e,0.0
+2026-06-17 18:08:27,System Design for ML,What is canary deployment in the context of ML model rollouts?,0.0
+2026-06-17 18:08:39,NLP,What is the difference between TF-IDF and word embeddings?,0.0
+2026-06-17 18:08:45,SQL,What is the difference between UNION and UNION ALL?,0.0
+2026-06-17 18:08:50,System Design for ML,How would you design a system to detect fraudulent transactions in real time?,0.0
+2026-06-17 18:38:26,SQL,What is the difference between INNER JOIN and LEFT JOIN?,0.0
+2026-06-18 19:15:22,Deep Learning,What is transfer learning?,6.4
+2026-06-18 19:44:07,Machine Learning,What is Principal Component Analysis (PCA)?,7.1
