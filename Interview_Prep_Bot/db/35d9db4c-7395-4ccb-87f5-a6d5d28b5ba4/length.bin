@@ -1,1 +1,4 @@
-invalid type: string "Topic: System Design for ML\nDifficulty: Medium\nQuestion: What is the purpose of logging predictions and inputs in a production ML system?\nAnswer: Logging predictions and inputs enables auditing, debugging unexpected behavior, building datasets for retraining, detecting data drift, and supporting compliance requirements in regulated industries.", expected f64cted i64Vertex 
+Topic: Python
+Difficulty: Easy
+Question: What is the difference between a shallow function and a recursive function in Python?
+Answer: A regular function performs a task in a single pass without calling itself. A recursive function calls itself with a smaller input until reaching a base case, useful for problems with naturally recursive structure like tree traversal or factorial computation.ÿÿÿÿÿÿ

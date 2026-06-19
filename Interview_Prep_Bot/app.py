@@ -9,8 +9,6 @@ st.set_page_config(
     layout="wide"
 )
 
-
-
 # Hide deploy button and footer
 st.markdown("""
 <style>
@@ -35,7 +33,10 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ── Session state defaults ────────────────────────
+
+
+
+# ── Session state defaults — MUST run before query param reading ──
 if "mode" not in st.session_state:
     st.session_state.mode = None
 if "messages" not in st.session_state:
@@ -48,11 +49,12 @@ if "recognized_text" not in st.session_state:
     st.session_state.recognized_text = ""
 if "input_mode" not in st.session_state:
     st.session_state.input_mode = "type"
+if "recognized_answer" not in st.session_state:
+    st.session_state.recognized_answer = ""
 
-# ── READ SPEECH/ANSWER FROM URL PARAMS — MUST BE FIRST ──
+# ── READ SPEECH/ANSWER FROM URL PARAMS — runs every rerun, after defaults exist ──
 qp = st.query_params
 
-# Practice mode speech
 if "speech" in qp and qp["speech"].strip():
     incoming = qp["speech"].strip()
     if incoming != st.session_state.recognized_text:
@@ -60,11 +62,12 @@ if "speech" in qp and qp["speech"].strip():
         st.query_params.clear()
         st.rerun()
 
-# Quiz mode speech answer
 if "answer" in qp and qp["answer"].strip():
-    st.session_state.recognized_answer = qp["answer"].strip()
-    st.query_params.clear()
-    st.rerun()
+    incoming = qp["answer"].strip()
+    if incoming != st.session_state.recognized_answer:
+        st.session_state.recognized_answer = incoming
+        st.query_params.clear()
+        st.rerun()
 
 
 # ══════════════════════════════════════════════════
@@ -171,7 +174,9 @@ if st.session_state.mode == "quiz":
         get_feedback, save_score, get_final_report
     )
 
-    # Quiz session state defaults
+    # NOTE: recognized_answer is NOT in this dict — it's already
+    # initialized above (top of file) so it must never be reset here,
+    # otherwise the speech-to-textarea value gets wiped on every rerun.
     quiz_defaults = {
         "quiz_started":      False,
         "questions":         [],
@@ -184,7 +189,6 @@ if st.session_state.mode == "quiz":
         "pending_speech":    "",
         "auto_speak":        True,
         "answer_mode":       "type",
-        "recognized_answer": "",
     }
     for k, v in quiz_defaults.items():
         if k not in st.session_state:
@@ -231,6 +235,7 @@ if st.session_state.mode == "quiz":
             if st.button("🔄 Restart Quiz", use_container_width=True):
                 for k, v in quiz_defaults.items():
                     st.session_state[k] = v
+                st.session_state.recognized_answer = ""
                 st.rerun()
 
         st.divider()
@@ -238,12 +243,14 @@ if st.session_state.mode == "quiz":
             st.session_state.mode = None
             for k, v in quiz_defaults.items():
                 st.session_state[k] = v
+            st.session_state.recognized_answer = ""
             st.rerun()
 
         if st.button("💬 Switch to Practice", use_container_width=True):
             st.session_state.mode = "practice"
             for k, v in quiz_defaults.items():
                 st.session_state[k] = v
+            st.session_state.recognized_answer = ""
             st.rerun()
 
     # ── Quiz Main UI ──────────────────────────────
@@ -467,10 +474,37 @@ if st.session_state.mode == "quiz":
                         setStatus('❌ Speak first!','#c62828','#ffebee');
                         return;
                     }
-                    setStatus('📤 Sending to answer box...','#0d47a1','#e3f2fd');
-                    var encoded=encodeURIComponent(text);
-                    window.parent.location.href=
-                        window.parent.location.pathname+'?answer='+encoded;
+                    if(listening){ stopMic(); }
+                    setStatus('🔎 Filling answer box...','#0d47a1','#e3f2fd');
+                    setTimeout(function(){
+                        try {
+                            var areas = window.parent.document.querySelectorAll('textarea');
+                            var filled = false;
+                            for (var i = 0; i < areas.length; i++) {
+                                var area = areas[i];
+                                if (area.placeholder && area.placeholder.indexOf('Use This Answer') !== -1) {
+                                    var setter = Object.getOwnPropertyDescriptor(
+                                        window.HTMLTextAreaElement.prototype, 'value'
+                                    ).set;
+                                    setter.call(area, text);
+                                    area.dispatchEvent(new Event('input', { bubbles: true }));
+                                    area.dispatchEvent(new Event('change', { bubbles: true }));
+                                    area.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    area.focus();
+                                    filled = true;
+                                    break;
+                                }
+                            }
+                            if (filled) {
+                                setStatus('✅ Answer box filled! Edit if needed, then Submit.','#1b5e20','#e8f5e9');
+                            } else {
+                                setStatus('⚠️ Could not find answer box. Please type manually.','#c62828','#ffebee');
+                            }
+                        } catch(err) {
+                            setStatus('⚠️ Could not fill automatically. Please type manually.','#c62828','#ffebee');
+                            console.log('Fill error:', err);
+                        }
+                    }, 150);
                 }
                 </script>
                 """
@@ -743,6 +777,7 @@ if st.session_state.mode == "quiz":
             ):
                 for k, v in quiz_defaults.items():
                     st.session_state[k] = v
+                st.session_state.recognized_answer = ""
                 st.rerun()
         with col2:
             if st.button(
@@ -752,6 +787,7 @@ if st.session_state.mode == "quiz":
                 st.session_state.mode = "practice"
                 for k, v in quiz_defaults.items():
                     st.session_state[k] = v
+                st.session_state.recognized_answer = ""
                 st.rerun()
         with col3:
             score_df = pd.DataFrame({
@@ -1034,10 +1070,37 @@ if st.session_state.input_mode == "speak":
             setStatus('❌ No speech. Click mic first!','#c62828','#ffebee');
             return;
         }
-        setStatus('📤 Sending...','#0d47a1','#e3f2fd');
-        var encoded=encodeURIComponent(text);
-        window.parent.location.href=
-            window.parent.location.pathname+'?speech='+encoded;
+        if(isListening){ stopMic(); }
+        setStatus('🔎 Filling question box...','#0d47a1','#e3f2fd');
+        setTimeout(function(){
+            try {
+                var areas = window.parent.document.querySelectorAll('textarea');
+                var filled = false;
+                for (var i = 0; i < areas.length; i++) {
+                    var area = areas[i];
+                    if (area.placeholder && area.placeholder.indexOf('Use This Text') !== -1) {
+                        var setter = Object.getOwnPropertyDescriptor(
+                            window.HTMLTextAreaElement.prototype, 'value'
+                        ).set;
+                        setter.call(area, text);
+                        area.dispatchEvent(new Event('input', { bubbles: true }));
+                        area.dispatchEvent(new Event('change', { bubbles: true }));
+                        area.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        area.focus();
+                        filled = true;
+                        break;
+                    }
+                }
+                if (filled) {
+                    setStatus('✅ Question box filled! Edit if needed, then Get Answer.','#1b5e20','#e8f5e9');
+                } else {
+                    setStatus('⚠️ Could not find question box. Please type manually.','#c62828','#ffebee');
+                }
+            } catch(err) {
+                setStatus('⚠️ Could not fill automatically. Please type manually.','#c62828','#ffebee');
+                console.log('Fill error:', err);
+            }
+        }, 150);
     }
     </script>
     """

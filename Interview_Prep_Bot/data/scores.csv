@@ -22,3 +22,14 @@ timestamp,topic,question,score
 2026-06-17 18:38:26,SQL,What is the difference between INNER JOIN and LEFT JOIN?,0.0
 2026-06-18 19:15:22,Deep Learning,What is transfer learning?,6.4
 2026-06-18 19:44:07,Machine Learning,What is Principal Component Analysis (PCA)?,7.1
+2026-06-19 13:00:05,NLP,What is the difference between BERT and GPT?,7.6
+2026-06-19 13:03:08,NLP,What is RAG in NLP?,1.4
+2026-06-19 13:03:47,Deep Learning,What is the vanishing gradient problem?,3.2
+2026-06-19 13:04:18,Machine Learning,What is a hyperparameter versus a parameter?,0.0
+2026-06-19 13:05:08,Statistics,What is a p-value?,8.4
+2026-06-19 13:07:36,Python,What is the difference between a list and a tuple in Python?,-0.4
+2026-06-19 13:08:01,System Design for ML,What is data drift and how is it detected in production ML systems?,2.1
+2026-06-19 13:08:42,SQL,What is the difference between OLTP and OLAP databases?,8.6
+2026-06-19 13:11:17,Python,What is the difference between a list and a dictionary?,-0.3
+2026-06-19 13:11:42,NLP,What is TF-IDF?,6.3
+2026-06-19 13:12:12,Deep Learning,What is the purpose of the softmax activation in the output layer?,8.1
