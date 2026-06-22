@@ -89,7 +89,8 @@ if st.session_state.mode is None:
     st.markdown("## Choose your mode")
     st.markdown(" ")
 
-    col1, col2 = st.columns(2, gap="large")
+    # ── 3 columns: Practice | Quiz | Idea Generator ──────────────────
+    col1, col2, col3 = st.columns(3, gap="large")
 
     with col1:
         st.markdown("""
@@ -148,6 +149,36 @@ if st.session_state.mode is None:
             key="btn_quiz"
         ):
             st.session_state.mode = "quiz"
+            st.rerun()
+
+    # ── NEW: Idea Generator column ────────────────────────────────────
+    with col3:
+        st.markdown("""
+        <div style="
+            border:2px solid #43e97b;
+            border-radius:15px; padding:28px;
+            min-height:280px;
+            background:linear-gradient(135deg,#43e97b11,#38f9d711);">
+            <h2 style="color:#2ecc71; margin-top:0;">💡 Idea Generator</h2>
+            <p>Don't know what to build? Fill a short form and get
+            <b>3 tailored project ideas</b> matched to your skill level,
+            tech stack, and timeline — each with a full day-by-day plan.</p>
+            <ul>
+                <li>Choose domain, difficulty, timeline</li>
+                <li>Select tech stack you already know</li>
+                <li>Get 3 ideas — beginner to advanced</li>
+                <li>Download full build plan as text</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+        st.markdown(" ")
+        if st.button(
+            "▶ Start Idea Generator",
+            type="primary",
+            use_container_width=True,
+            key="btn_ideas"
+        ):
+            st.session_state.mode = "ideas"
             st.rerun()
 
     st.divider()
@@ -809,6 +840,15 @@ if st.session_state.mode == "quiz":
                 use_container_width=True
             )
 
+    st.stop()
+
+
+# ══════════════════════════════════════════════════
+# SCREEN — IDEA GENERATOR MODE  (NEW)
+# ══════════════════════════════════════════════════
+if st.session_state.mode == "ideas":
+    from idea_generator import show_idea_generator
+    show_idea_generator()
     st.stop()
 
 

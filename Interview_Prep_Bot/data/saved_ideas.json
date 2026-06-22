@@ -1,0 +1,73 @@
+[
+  {
+    "title": "Text Summarizer",
+    "difficulty": "Beginner",
+    "problem": "Automate text summarization for blog posts or articles to quickly understand their main points.",
+    "solution": "Utilize the LangChain library to create a text summarization model that summarizes long articles or blog posts, extracting the most important information. The model will leverage the PyPDF2 library to parse and understand the structure of the PDF document.",
+    "tech_stack": [
+      "LangChain",
+      "PyPDF2",
+      "Python"
+    ],
+    "timeline": "7 days",
+    "architecture": [
+      "Step 1: Collect and preprocess text data from PDF documents using PyPDF2.",
+      "Step 2: Use LangChain to create a text summarization model.",
+      "Step 3: Train the model on a dataset of PDF articles.",
+      "Step 4: Deploy the model using FastAPI for user interaction.",
+      "Step 5: Integrate the model with Streamlit for a user-friendly interface.",
+      "Step 6: Optimize the model's performance using PyPDF2's built-in functionality.",
+      "Step 7: Test and refine the model's output for accurate summarization."
+    ],
+    "day_plan": {
+      "Day 1": "Collect and preprocess text data from PDF documents.",
+      "Day 2": "Use LangChain to create a text summarization model.",
+      "Day 3": "Train the model on a dataset of PDF articles.",
+      "Day 4": "Deploy the model using FastAPI.",
+      "Day 5": "Integrate the model with Streamlit.",
+      "Day 6": "Optimize the model's performance.",
+      "Day 7": "Test and refine the model's output."
+    },
+    "core_features": [
+      "Text Summarization",
+      "PDF Parsing"
+    ],
+    "bonus_features": [
+      "User Interface with Streamlit",
+      "Model Optimization"
+    ],
+    "why_impressive": "The ability to summarize long articles or blog posts quickly and accurately will make this project stand out for internship or portfolio purposes.",
+    "github_tips": "Use meaningful commit messages and organize the project structure to ensure easy navigation and understanding of the codebase."
+  },
+  {
+    "title": "House Price Predictor",
+    "difficulty": "Beginner",
+    "problem": "Predict the price of a house based on its features, helping real estate agents and clients make informed decisions.",
+    "solution": "This project uses a simple linear regression model trained on a dataset of house prices and features, allowing the user to input house characteristics and receive a predicted price. The model is deployed using Streamlit, enabling easy interaction and visualization.",
+    "tech_stack": [
+      "Python",
+      "Streamlit"
+    ],
+    "timeline": "3 days",
+    "architecture": [
+      "Step 1: Collect and preprocess a house price dataset.",
+      "Step 2: Split the data into training and testing sets.",
+      "Step 3: Train a linear regression model on the training data.",
+      "Step 4: Evaluate the model's performance on the test data."
+    ],
+    "day_plan": {
+      "Day 1": "Collect and preprocess the house price dataset.",
+      "Day 2": "Split the data and train the linear regression model.",
+      "Day 3": "Evaluate the model's performance and deploy it using Streamlit."
+    },
+    "core_features": [
+      "Linear Regression",
+      "Data Preprocessing"
+    ],
+    "bonus_features": [
+      "Hyperparameter Tuning"
+    ],
+    "why_impressive": "This project showcases the student's ability to collect and preprocess data, train a simple machine learning model, and deploy it using Streamlit, highlighting their understanding of the end-to-end data science workflow.",
+    "github_tips": "The student should include a clear README explaining the dataset, the model, and the code, as well as provide example usage and results."
+  }
+]
