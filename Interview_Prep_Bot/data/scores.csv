@@ -33,3 +33,13 @@ timestamp,topic,question,score
 2026-06-19 13:11:17,Python,What is the difference between a list and a dictionary?,-0.3
 2026-06-19 13:11:42,NLP,What is TF-IDF?,6.3
 2026-06-19 13:12:12,Deep Learning,What is the purpose of the softmax activation in the output layer?,8.1
+2026-06-23 16:54:48,SQL,What is a transaction in SQL and what does ACID stand for?,0.0
+2026-06-23 16:55:12,Statistics,What is skewness in a data distribution?,0.0
+2026-06-23 16:55:18,NLP,What is cosine similarity used for in NLP?,0.0
+2026-06-23 16:55:38,System Design for ML,What is the role of an API gateway in an ML system architecture?,0.0
+2026-06-23 16:55:44,SQL,What is the difference between INNER JOIN and LEFT JOIN?,0.0
+2026-06-23 16:55:50,System Design for ML,What are the main components of a machine learning system in production?,0.0
+2026-06-23 16:55:55,Machine Learning,How do you choose the value of K in KNN?,0.0
+2026-06-23 16:56:02,Python,What is the difference between deep copy and shallow copy?,0.0
+2026-06-23 16:56:07,Machine Learning,What is unsupervised learning?,0.0
+2026-06-23 16:56:12,Machine Learning,How do you choose the number of clusters in K-Means?,0.0
