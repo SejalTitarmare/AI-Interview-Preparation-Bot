@@ -43,3 +43,33 @@ timestamp,topic,question,score
 2026-06-23 16:56:02,Python,What is the difference between deep copy and shallow copy?,0.0
 2026-06-23 16:56:07,Machine Learning,What is unsupervised learning?,0.0
 2026-06-23 16:56:12,Machine Learning,How do you choose the number of clusters in K-Means?,0.0
+2026-06-24 17:39:21,Deep Learning,What is the vanishing gradient problem?,6.7
+2026-06-24 17:40:49,System Design for ML,What is shadow deployment in ML model rollout strategies?,7.5
+2026-06-24 17:41:17,NLP,What is the difference between prompt engineering and fine-tuning for adapting a,0.0
+2026-06-24 17:41:27,Python,What is the difference between '__init__' and '__new__' in Python classes?,0.0
+2026-06-24 17:41:40,Deep Learning,What is batch normalization?,0.0
+2026-06-24 17:41:46,Statistics,What is the difference between covariance and correlation?,0.0
+2026-06-24 17:41:53,Python,What is the purpose of the 'with' statement in Python?,0.0
+2026-06-24 17:42:02,Deep Learning,What is the Adam optimizer?,0.0
+2026-06-24 17:42:10,SQL,What is the difference between UNION and UNION ALL?,0.0
+2026-06-24 17:42:17,Machine Learning,What is K-Means clustering?,0.0
+2026-06-24 17:50:14,System Design for ML,What is the role of an API gateway in an ML system architecture?,5.9
+2026-06-24 17:51:32,System Design for ML,What is data drift and how is it detected in production ML systems?,8.0
+2026-06-24 17:51:53,Python,What is list comprehension and why is it useful?,0.0
+2026-06-24 17:52:00,Machine Learning,What is K-Means clustering?,0.0
+2026-06-24 17:52:07,Python,What is the purpose of the 'zip' function in Python?,0.0
+2026-06-24 17:52:14,Deep Learning,What are the gates in an LSTM cell and what do they do?,0.0
+2026-06-24 17:52:21,SQL,What is the difference between a stored procedure and a function in SQL?,0.0
+2026-06-24 17:52:27,Deep Learning,What is a CNN used for?,0.0
+2026-06-24 17:52:34,Statistics,What is the difference between a one-tailed and two-tailed hypothesis test?,0.0
+2026-06-24 17:52:41,NLP,What is named entity recognition (NER)?,0.0
+2026-06-24 18:23:52,Machine Learning,What is the difference between classification and regression?,6.2
+2026-06-24 18:24:11,System Design for ML,What is the difference between a monolithic ML architecture and a microservices-,0.0
+2026-06-24 18:24:53,System Design for ML,What are the main components of a machine learning system in production?,4.7
+2026-06-24 18:25:08,Deep Learning,What is the purpose of the softmax activation in the output layer?,0.0
+2026-06-24 18:25:13,NLP,What is TF-IDF?,0.0
+2026-06-24 18:25:20,System Design for ML,How would you design a recommendation system for an e-commerce platform at a hig,0.0
+2026-06-24 18:25:26,Python,What is the difference between mutable and immutable data types in Python with e,0.0
+2026-06-24 18:25:33,System Design for ML,What is caching and how can it improve an ML system's performance?,0.0
+2026-06-24 18:25:41,Statistics,What is sampling bias?,0.0
+2026-06-24 18:25:50,System Design for ML,What is model serving and what tools are commonly used for it?,0.0

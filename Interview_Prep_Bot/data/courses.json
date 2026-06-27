@@ -1,0 +1,110 @@
+[
+  {
+    "course_code": "UC-2026",
+    "course_name": "Unknown Course",
+    "modules": [
+      {
+        "name": "Module 1: Python Basics",
+        "week": "Week 1-2",
+        "topics": [
+          "Variables",
+          "data types",
+          "loops",
+          "functions",
+          "OOP"
+        ],
+        "tools": [
+          "Python 3",
+          "Jupyter Notebook"
+        ]
+      },
+      {
+        "name": "Module 2: Pandas & Data Analysis",
+        "week": "Week 3-4",
+        "topics": [
+          "DataFrames",
+          "cleaning",
+          "groupby",
+          "merging"
+        ],
+        "tools": [
+          "Python",
+          "Pandas",
+          "NumPy",
+          "Matplotlib"
+        ]
+      },
+      {
+        "name": "Module 3: Machine Learning",
+        "week": "Week 5-6",
+        "topics": [
+          "Regression",
+          "classification",
+          "model evaluation"
+        ],
+        "tools": [
+          "Python",
+          "Scikit-learn",
+          "Pandas"
+        ]
+      },
+      {
+        "name": "Module 4: Data Visualization",
+        "week": "Week 7",
+        "topics": [
+          "Charts",
+          "dashboards",
+          "storytelling"
+        ],
+        "tools": [
+          "Matplotlib",
+          "Seaborn",
+          "Plotly"
+        ]
+      },
+      {
+        "name": "Module 5: SQL for Data Science",
+        "week": "Week 8",
+        "topics": [
+          "Queries",
+          "joins",
+          "aggregation",
+          "optimization"
+        ],
+        "tools": [
+          "MySQL",
+          "SQLite"
+        ]
+      },
+      {
+        "name": "Module 6: Deep Learning",
+        "week": "Week 9-10",
+        "topics": [
+          "Neural networks",
+          "CNN",
+          "TensorFlow basics"
+        ],
+        "tools": [
+          "TensorFlow",
+          "Keras"
+        ]
+      },
+      {
+        "name": "Module 7: Capstone Project",
+        "week": "Week 11-12",
+        "topics": [
+          "End-to-end data science project",
+          "deployment",
+          "presentation"
+        ],
+        "tools": [
+          "Python",
+          "Streamlit",
+          "Git",
+          "GitHub"
+        ]
+      }
+    ],
+    "created_at": "2026-06-27 10:06"
+  }
+]

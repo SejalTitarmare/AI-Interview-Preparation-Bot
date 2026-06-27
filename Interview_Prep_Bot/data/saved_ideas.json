@@ -69,5 +69,123 @@
     ],
     "why_impressive": "This project showcases the student's ability to collect and preprocess data, train a simple machine learning model, and deploy it using Streamlit, highlighting their understanding of the end-to-end data science workflow.",
     "github_tips": "The student should include a clear README explaining the dataset, the model, and the code, as well as provide example usage and results."
+  },
+  {
+    "title": "Sentiment Analysis of Customer Reviews",
+    "difficulty": "Intermediate",
+    "problem": "Build a sentiment analysis model that can classify customer reviews as positive, negative, or neutral, and deploy it using a Streamlit dashboard.",
+    "solution": "This project uses the HuggingFace library to load a pre-trained sentiment analysis model, processes the reviews using Scikit-learn's text preprocessing techniques, and displays the classification results on a Streamlit dashboard. The model is also deployed using the HuggingFace Transformers library.",
+    "tech_stack": [
+      "Streamlit",
+      "HuggingFace",
+      "Scikit-learn",
+      "Matplotlib"
+    ],
+    "timeline": "7 days",
+    "architecture": [
+      "Step 1: Load the pre-trained sentiment analysis model using HuggingFace.",
+      "Step 2: Process the customer reviews using Scikit-learn's text preprocessing techniques.",
+      "Step 3: Classify the reviews using the pre-trained sentiment analysis model.",
+      "Step 4: Display the classification results on the Streamlit dashboard.",
+      "Step 5: Add a button to allow users to visualize the classification results using Matplotlib.",
+      "Step 6: Deploy the model using HuggingFace Transformers.",
+      "Step 7: Test the model with sample reviews and deploy it on a cloud platform."
+    ],
+    "day_plan": {
+      "Day 1": "Load the pre-trained sentiment analysis model using HuggingFace.",
+      "Day 2": "Process the customer reviews using Scikit-learn's text preprocessing techniques.",
+      "Day 3": "Classify the reviews using the pre-trained sentiment analysis model.",
+      "Day 4": "Display the classification results on the Streamlit dashboard.",
+      "Day 5": "Add a button to allow users to visualize the classification results using Matplotlib.",
+      "Day 6": "Deploy the model using HuggingFace Transformers.",
+      "Day 7": "Test the model with sample reviews and deploy it on a cloud platform."
+    },
+    "core_features": [
+      "Sentiment Analysis",
+      "Pre-trained Model",
+      "Streamlit Dashboard"
+    ],
+    "bonus_features": [
+      "Model Deployment",
+      "Text Preprocessing"
+    ],
+    "why_impressive": "This project showcases the student's ability to build a robust sentiment analysis model using a pre-trained model and Scikit-learn's text preprocessing techniques.",
+    "github_tips": "Use a clear and concise commit message, and provide a detailed README file that explains the project setup and usage."
+  },
+  {
+    "title": "Sentiment Analysis App",
+    "difficulty": "Beginner",
+    "problem": "Develop a simple Sentiment Analysis application to determine whether a given text is positive, negative or neutral.",
+    "solution": "The AI/model uses a pre-trained NLP model to analyze the text and predict the sentiment, while the code handles user input and displays the results through a Streamlit app. The model will be trained and evaluated using Scikit-learn's built-in metrics.",
+    "tech_stack": [
+      "Python",
+      "Streamlit",
+      "Scikit-learn",
+      "Matplotlib"
+    ],
+    "timeline": "7 days",
+    "architecture": [
+      "Step 1: Import necessary libraries and set up a Streamlit app",
+      "Step 2: Load a pre-trained NLP model using Scikit-learn",
+      "Step 3: Create a function to analyze the sentiment of a given text",
+      "Step 4: Display the sentiment analysis results through Streamlit"
+    ],
+    "day_plan": {
+      "Day 1": "Set up Streamlit app and import necessary libraries",
+      "Day 2": "Load pre-trained NLP model and create sentiment analysis function",
+      "Day 3": "Implement user input and result display through Streamlit",
+      "Day 4": "Train and evaluate the model using Scikit-learn",
+      "Day 5": "Visualize results using Matplotlib",
+      "Day 6": "Add error handling and edge cases",
+      "Day 7": "Test and finalize the application"
+    },
+    "core_features": [
+      "Sentiment Analysis",
+      "Streamlit App",
+      "Scikit-learn Model"
+    ],
+    "bonus_features": [
+      "Model Evaluation",
+      "Result Visualization"
+    ],
+    "why_impressive": "This project showcases basic NLP and application development skills, making it a great addition to an internship portfolio.",
+    "github_tips": "Use a clear README with installation and usage instructions, and include a sample text file for testing."
+  },
+  {
+    "title": "Trendy T-Shirts",
+    "difficulty": "Beginner",
+    "problem": "Analyze popular T-shirt designs to find trending colors, patterns, and styles.",
+    "solution": "Use ChromaDB to collect and analyze design data, then visualize insights with Matplotlib and Streamlit. Identify top colors, patterns, and styles.",
+    "tech_stack": [
+      "ChromaDB",
+      "Matplotlib",
+      "Streamlit"
+    ],
+    "timeline": "7 days",
+    "architecture": [
+      "Step 1: Set up ChromaDB and collect design data",
+      "Step 2: Clean and preprocess data",
+      "Step 3: Use Matplotlib to create insightful visualizations",
+      "Step 4: Deploy with Streamlit"
+    ],
+    "day_plan": {
+      "Day 1": "Set up ChromaDB and collect design data",
+      "Day 2": "Clean and preprocess data",
+      "Day 3": "Use Matplotlib to create insightful visualizations",
+      "Day 4": "Design and build the Streamlit app",
+      "Day 5": "Deploy with Streamlit",
+      "Day 6": "Test and refine the app",
+      "Day 7": "Finalize and document the project"
+    },
+    "core_features": [
+      "Design analysis",
+      "Insightful visualizations",
+      "Streamlit app"
+    ],
+    "bonus_features": [
+      "Interactive dashboard"
+    ],
+    "why_impressive": "This project showcases data analysis and visualization skills using popular tools.",
+    "github_tips": "Use clear and concise commit messages and branch names, and provide a detailed README file."
   }
 ]
